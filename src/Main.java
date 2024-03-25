@@ -1,17 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int initial = 100;
-        int payment = 3000;
-        int oneBonus = 100;
-        if (payment <= 1000) {
-            int bonus = 0;
-            System.out.println((bonus) + "-начислено бонусов");
-            System.out.println((initial + payment + bonus) + "-итоговый счет");
-        }
+        int initial = 200; //начальный счет
+        int payment = 1500; //сумма пополнения
+        int oneBonus = 100; //расчетное количество бонусов 100 р=1 бонус/
+        int bonus;
         if (payment > 1000) {
-            int bonus = payment / oneBonus;
-            System.out.println((bonus) + "-начислено бонусов");
-            System.out.println((initial + payment + bonus) + "-итоговый счет");
+            bonus = payment / oneBonus;
+        } else {
+            bonus = 0;
         }
+        System.out.println((bonus) + "-начислено бонусов");
+        System.out.println((initial + payment + bonus) + "-итоговый счет");
     }
 }
